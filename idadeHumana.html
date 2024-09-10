@@ -9,13 +9,36 @@
     */
 
     // Entrada de Dados
-  const medio = 
+  const pequeno = 5; // fator cães pequeno
+  const médio = 6; // fator cães médio
+  const grandes = 7; // fator cães grandes
 
+  const fatorMultiplicacao = 5; // Fator para multiplicar a idade do cachorro
+  const idadeMaxima = 13; // Idade máxima permitida
+    
+  const porte = prompt ("Me diga o porte do seu cão: P-Pequeno, M-Médio ou G-Grande");
+  const idade = prompt ("Me diga a Idade do seu cão.");
 
+  const idadeNum = parseInt(idade, 10); // base 10 para conversão decimal
+    
     // Processamento
-
-
-
+  if (isNaN(idadeNum)) { // verifica se idadeNum é um número válido. Se não for
+    document.write("Por favor, insira uma idade válida.");
+} else if (idadeNum > idadeMaxima) {
+    document.write("Idade inválida. O valor máximo permitido é 13 anos.");
+} else {
+    const idadeHumana = idadeNum * fatorMultiplicacao;
+      
+      if (porte === "P") { // Porte pequeno
+        document.write(`A idade humana do seu cão é ${idadeHumana} anos.`);
+    } else if (porte === "M") { // Porte médio
+        document.write(`A idade humana do seu cão é ${idadeHumana} anos.`);
+    } else if (porte === "G") { // Porte grande
+        document.write(`A idade humana do seu cão é ${idadeHumana} anos.`);
+    } else {
+        document.write("Porte não reconhecido. Por favor, insira P, M ou G.");
+    }
+}
     // Saída de Dados
     
 

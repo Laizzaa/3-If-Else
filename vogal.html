@@ -3,15 +3,19 @@
     //PROBLEMA: Vogal - Construa um programa que leia um caractere e informe se este caractere é uma vogal.
 
     // Entrada de dados
-    
-
+const caractere = prompt("Digite um caractere para verificar se é uma vogal:");
     
     // Processamento
-    
-
-    
+    if (caractere.length == 1 && 'aeiouAEIOU'.includes(caractere)) {
+        document.write(caractere + " é uma vogal.");
+    } else if (caractere.length == 1) {
+        document.write(caractere + " não é uma vogal.");
+    } else {
+        document.write("Por favor, digite apenas um caractere.");
+    }
     // Saída de dados
-
+    
+    
     
 
 </script>
